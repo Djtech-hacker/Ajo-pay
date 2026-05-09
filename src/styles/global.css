@@ -1,0 +1,130 @@
+/* =============================================
+   GLOBAL STYLES — Ajo Contribution Manager
+   ============================================= */
+
+@import './variables.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--surface);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ink4); }
+
+/* ---- Links ---- */
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+
+/* ---- Inputs base ---- */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+/* ---- Accessibility ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ---- Utility ---- */
+.text-success { color: var(--success); }
+.text-warn    { color: var(--warn); }
+.text-danger  { color: var(--danger); }
+.text-info    { color: var(--info); }
+.text-mono    { font-family: var(--font-mono); }
+.text-serif   { font-family: var(--font-serif); font-style: italic; }
+
+/* ---- Flash animation ---- */
+@keyframes flashIn {
+  0%   { opacity: 0.3; transform: scale(0.98); }
+  100% { opacity: 1;   transform: scale(1); }
+}
+.flash { animation: flashIn 0.35s ease; }
+
+@keyframes slideUp {
+  0%   { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.slide-up { animation: slideUp 0.3s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.fade-in { animation: fadeIn 0.2s ease; }
+
+/* ---- Page wrapper used in all authenticated pages ---- */
+.page-content {
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+/* ---- Section headers inside pages ---- */
+.section-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--ink3);
+  margin-bottom: var(--space-3);
+}
+
+/* ---- Divider ---- */
+.divider {
+  height: 0.5px;
+  background: var(--border2);
+  margin: var(--space-3) 0;
+}
+
+/* ---- Empty state ---- */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-10);
+  color: var(--ink3);
+  text-align: center;
+}
+.empty-state svg { opacity: 0.3; }
+.empty-state p { font-size: 13px; }
+
+/* ---- Responsive breakpoints ---- */
+/* Desktop:   > 1024px  — default */
+/* Tablet:    768–1024px */
+/* Mobile:    < 768px   */

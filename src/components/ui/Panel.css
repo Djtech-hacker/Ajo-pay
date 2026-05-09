@@ -1,0 +1,55 @@
+/* =============================================
+   PANEL STYLES
+   ============================================= */
+
+.panel {
+  background: var(--card);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 0.5px solid var(--border2);
+  gap: var(--space-3);
+}
+.panel__title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.panel__action {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.panel__body {
+  padding: 18px;
+}
+
+/* Layout helpers */
+.panels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+.panels-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.panel--full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .panels-grid,
+  .panels-grid--3 { grid-template-columns: 1fr; }
+}

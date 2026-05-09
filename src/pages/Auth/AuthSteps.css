@@ -1,0 +1,39 @@
+/* Step indicator for register — append to Auth.css */
+.auth-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 20px;
+}
+.auth-step {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink3);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+.auth-step--active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+.auth-step--done {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent2);
+}
+.auth-step-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border2);
+  max-width: 60px;
+  margin: 0 8px;
+}

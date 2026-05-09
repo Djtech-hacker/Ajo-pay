@@ -1,0 +1,58 @@
+/* =============================================
+   METRIC CARD STYLES
+   ============================================= */
+
+.metric-card {
+  background: var(--card);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  transition: box-shadow var(--transition);
+}
+.metric-card:hover { box-shadow: var(--shadow-sm); }
+
+.metric-card--accent {
+  background: var(--accent);
+  border-color: transparent;
+}
+.metric-card--accent .metric-card__label { color: rgba(255,255,255,0.5); }
+.metric-card--accent .metric-card__value { color: var(--accent2); }
+.metric-card--accent .metric-card__delta { color: rgba(255,255,255,0.6); }
+
+.metric-card__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.metric-card__value {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 5px 0 3px;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.metric-card__delta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+.metric-card__delta--up   { color: var(--success); }
+.metric-card__delta--down { color: var(--danger); }
+.metric-card__delta--neutral { color: var(--ink3); }
+
+/* ---- Grid helper ---- */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .metrics-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .metric-card__value { font-size: 18px; }
+}

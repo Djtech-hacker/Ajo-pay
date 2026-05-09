@@ -1,0 +1,119 @@
+/* =============================================
+   TOPBAR STYLES
+   ============================================= */
+
+.topbar {
+  height: var(--topbar-height);
+  background: var(--card);
+  border-bottom: 0.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.topbar__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.topbar__title {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-style: italic;
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.1;
+}
+.topbar__sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink3);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.topbar__live-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--success-bg);
+  color: var(--success);
+  border: 0.5px solid var(--success-border);
+  white-space: nowrap;
+}
+
+.topbar__bell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  color: var(--ink3);
+  border: 0.5px solid var(--border);
+  transition: all var(--transition);
+}
+.topbar__bell:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.topbar__bell-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--danger);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 500;
+  padding: 1px 4px;
+  border-radius: var(--radius-full);
+  min-width: 14px;
+  text-align: center;
+  line-height: 12px;
+}
+
+/* Hamburger button */
+.topbar__menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+.topbar__menu-btn span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--ink2);
+  border-radius: 2px;
+  transition: background var(--transition);
+}
+.topbar__menu-btn:hover span { background: var(--accent); }
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .topbar__menu-btn { display: flex; }
+}
+@media (max-width: 480px) {
+  .topbar { padding: 0 var(--space-4); }
+  .topbar__title { font-size: 16px; }
+}

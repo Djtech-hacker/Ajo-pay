@@ -1,0 +1,70 @@
+/* =============================================
+   BUTTON STYLES
+   ============================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  position: relative;
+  text-decoration: none;
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.btn--full { width: 100%; }
+
+/* Sizes */
+.btn--sm { height: 30px; padding: 0 12px; font-size: 11px; }
+.btn--md { height: 38px; padding: 0 18px; font-size: 12px; }
+.btn--lg { height: 46px; padding: 0 24px; font-size: 13px; }
+
+/* Variants */
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent2);
+}
+.btn--primary:hover:not(:disabled) { background: var(--accent-mid); }
+
+.btn--secondary {
+  background: var(--surface);
+  color: var(--ink2);
+  border: 0.5px solid var(--border);
+}
+.btn--secondary:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.btn--danger {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 0.5px solid var(--danger-border);
+}
+.btn--danger:hover:not(:disabled) { background: var(--danger); color: #fff; }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink3);
+}
+.btn--ghost:hover:not(:disabled) { background: var(--surface2); color: var(--ink); }
+
+/* Loading spinner */
+.btn__spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

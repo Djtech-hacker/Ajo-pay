@@ -1,0 +1,77 @@
+/* =============================================
+   CSS DESIGN TOKENS — Ajo Contribution Manager
+   Edit these variables to retheme the entire app
+   ============================================= */
+
+:root {
+  /* Brand Colors */
+  --ink: #0e1117;
+  --ink2: #3a3f4b;
+  --ink3: #6b7280;
+  --ink4: #9ca3af;
+  --surface: #f8f7f4;
+  --surface2: #f1f0ed;
+  --card: #ffffff;
+  --border: rgba(14, 17, 23, 0.1);
+  --border2: rgba(14, 17, 23, 0.06);
+
+  /* Accent — deep forest green */
+  --accent: #1a3a2a;
+  --accent-mid: #234d38;
+  --accent-light: #e8f0eb;
+  --accent2: #c8f54a;   /* lime highlight */
+
+  /* Semantic */
+  --success: #15803d;
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+  --warn: #b45309;
+  --warn-bg: #fffbeb;
+  --warn-border: #fde68a;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+  --info: #1d4ed8;
+  --info-bg: #eff6ff;
+  --info-border: #bfdbfe;
+
+  /* Typography */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Radius */
+  --radius-sm: 5px;
+  --radius: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.12);
+
+  /* Layout */
+  --sidebar-width: 228px;
+  --topbar-height: 58px;
+  --content-max: 1280px;
+
+  /* Transitions */
+  --transition: 0.15s ease;
+  --transition-med: 0.25s ease;
+}
+
+/* Dark mode placeholder — wire up later */
+/* @media (prefers-color-scheme: dark) { :root { ... } } */

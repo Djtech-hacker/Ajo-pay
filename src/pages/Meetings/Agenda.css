@@ -1,0 +1,96 @@
+/* =============================================
+   AGENDA PAGE STYLES
+   ============================================= */
+
+.agenda-meeting-banner {
+  background: var(--accent);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.agenda-banner-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent2);
+}
+.agenda-banner-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 3px;
+}
+
+.agenda-submission-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 0.5px solid var(--border2);
+}
+.agenda-submission-card:last-child { border-bottom: none; }
+
+.agenda-submission-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius);
+  border: 0.5px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  background: var(--surface);
+}
+
+.agenda-submission-body { flex: 1; min-width: 0; }
+.agenda-submission-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.agenda-submission-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink3);
+}
+
+.agenda-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Shared form helpers */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--ink3);
+}
+.form-field input, .form-field select, .form-field textarea {
+  height: 38px;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink);
+  background: var(--surface);
+  outline: none;
+  transition: border-color var(--transition);
+}
+.form-field textarea { height: auto; padding: 10px 12px; resize: vertical; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  border-color: var(--accent); background: #fff;
+}
